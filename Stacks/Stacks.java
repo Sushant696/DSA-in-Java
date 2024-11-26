@@ -1,16 +1,16 @@
-package Basics;
+package Stacks;
 
 public class Stacks {
-  int[] stk;
+  char[] stk;
   int top = -1;
   static int size;
 
   Stacks(int size) {
-    stk = new int[size];
+    stk = new char[size];
     this.size = size;
   }
 
-  void push(int data) {
+  void push(char data) {
 
     if (isFull()) {
       System.out.println("Stack overflow");
@@ -19,10 +19,10 @@ public class Stacks {
     }
   }
 
-  int pop() {
+  char pop() {
     if (isEmpty()) {
       System.out.println("Stack is empty");
-      return -99;
+      return 'f';
     }
     return stk[top--];
   }
@@ -31,14 +31,21 @@ public class Stacks {
     return top == -1;
   }
 
+  char peek() {
+    return stk[top];
+  }
+
   boolean isFull() {
     return top == size - 1; // return true if at top at last index
   }
 
   public static void main(String[] args) {
     Stacks s = new Stacks(size);
-    s.push(10);
+    s.push('1');
     System.out.println();
 
   }
 }
+
+// write an algo to convert infix to prefix and vice versa
+// Write an algorithm to evaluate postfix algorithm

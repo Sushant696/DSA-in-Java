@@ -1,7 +1,7 @@
 // Write a program to find if the number input by the user is palindrome or not..
 // Palindrome number remains the same when it's digits are reversed
 
-package basics;
+package general;
 
 import java.util.Scanner;
 

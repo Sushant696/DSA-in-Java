@@ -1,4 +1,4 @@
-package general;
+package Array;
 
 public class array {
   static void InsertIntoArray(int a[], int p, int d, int n) {
@@ -9,10 +9,6 @@ public class array {
 
     a[p] = d;
     n++;
-
-    for (int i : a) {
-      System.out.println(i);
-    }
 
   }
 
