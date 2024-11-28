@@ -28,7 +28,7 @@ public class LeftShift {
     int arr[] = { 1, 2, 3, 4, 5 };
     int n = arr.length;
     Scanner sc = new Scanner(System.in);
-    System.out.println("Please Enter how many times you want to shift beat");
+    System.out.println("Please Enter how many times you want to shift elements to left:");
     int leftShiftNum = sc.nextInt();
     sc.close();
     leftShiftMethod(arr, n, leftShiftNum);
