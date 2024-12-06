@@ -9,6 +9,9 @@ public class array {
 
     a[p] = d;
     n++;
+    for (int i : a) {
+      
+    }
 
   }
 

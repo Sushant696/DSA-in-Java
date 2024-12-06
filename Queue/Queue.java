@@ -1,16 +1,15 @@
-package Basics;
+package Queue;
 
 /**
- * CircularQueue
+ * Queue
  */
-public class CircularQueue {
-
+public class Queue {
+  int queue[];
+  int size;
   int front = -1;
   int rear = -1;
-  int size;
-  int queue[];
 
-  CircularQueue(int size) {
+  Queue(int size) {
     this.size = size;
     queue = new int[size];
   }
@@ -22,14 +21,14 @@ public class CircularQueue {
       if (front == -1) {
         front = 0;
       }
-      rear = (rear + 1) % size;
-      queue[rear] = data;
+      queue[++rear] = data;
     }
   }
 
-  int dequeue() {
+  int dequeqe() {
+
     if (isEmpty()) {
-      System.out.println("Queue is empty");
+      System.out.println("Queue is Empty..");
       return -1;
     }
     if (front == rear) {
@@ -37,20 +36,18 @@ public class CircularQueue {
       front = rear = -1;
       return queue[temp];
     }
-    int temp = front;
-    front = (front + 1) % size;
-    return queue[temp];
-  }
-
-  boolean isEmpty() {
-    return front == -1 && rear == -1;
+    return queue[front++];
   }
 
   boolean isFull() {
-    return (rear + 1) % size == front;
+    return rear == size - 1;
+  }
+
+  boolean isEmpty() {
+    return rear == -1 && front == -1;
   }
 
   public static void main(String[] args) {
-
+    System.out.println("");
   }
 }
