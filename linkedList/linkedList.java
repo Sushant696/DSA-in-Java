@@ -1,7 +1,5 @@
 package linkedList;
 
-import java.util.LinkedList;
-
 /**
  * linkedList
  */
@@ -38,6 +36,7 @@ public class linkedList {
     }
   }
 
+  @SuppressWarnings("unused")
   void addHeadFirst(int data) {
     Node newNode = new Node(data);
     if (head == null) {

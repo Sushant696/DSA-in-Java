@@ -1,75 +1,77 @@
-package Stacks;
+// package Stacks;
 
-/**
- * Questions :- Reverse a array using stack
- * ReverseArray
- */
+// import caching.Stacks;
 
-public class ReverseArray {
+// /**
+// * Questions :- Reverse a array using stack
+// * ReverseArray
+// */
 
-  static int[] reverseArray(int arr[]) {
-    int[] revArr = new int[5];
-    Stacks stk = new Stacks(6);
-    for (int i : arr) {
-      stk.push(i);
-    }
-    for (int i = 0; i < revArr.length; i++) {
-      int popItem = stk.pop();
-      revArr[i] = popItem;
-    }
-    //
+// public class ReverseArray {
 
-    return revArr;
-  }
+// static int[] reverseArray(int arr[]) {
+// int[] revArr = new int[5];
+// Stacks stk = new Stacks(6);
+// for (int i : arr) {
+// stk.push(i);
+// }
+// for (int i = 0; i < revArr.length; i++) {
+// int popItem = stk.pop();
+// revArr[i] = popItem;
+// }
+// //
 
-  public static void main(String[] args) {
-    int arr[] = { 1, 2, 3, 4, 5 };
-    int revArr[] = reverseArray(arr);
-    System.out.print("Reverse array :");
-    for (int i : revArr) {
-      System.out.print(i);
-    }
-  }
-}
+// return revArr;
+// }
 
-class Stacks {
-  int size;
-  int stk[];
-  int top = -1;
+// public static void main(String[] args) {
+// int arr[] = { 1, 2, 3, 4, 5 };
+// int revArr[] = reverseArray(arr);
+// System.out.print("Reverse array :");
+// for (int i : revArr) {
+// System.out.print(i);
+// }
+// }
+// }
 
-  // making stack here to use to reverse the array
-  Stacks(int size) {
-    this.size = size;
-    stk = new int[size];
-  }
+// class Stacks {
+// int size;
+// int stk[];
+// int top = -1;
 
-  boolean isEmpty() {
-    return top == -1;
-  }
+// // making stack here to use to reverse the array
+// Stacks(int size) {
+// this.size = size;
+// stk = new int[size];
+// }
 
-  boolean isFull() {
-    return top == size - 1;
-  }
+// boolean isEmpty() {
+// return top == -1;
+// }
 
-  int peek() {
-    System.out.println(stk[top]);
-    return stk[top];
-  }
+// boolean isFull() {
+// return top == size - 1;
+// }
 
-  int pop() {
-    if (isEmpty()) {
-      System.out.println("Stack is empty, no item to pop");
-      return -1;
-    } else {
-      return stk[top--];
-    }
-  }
+// int peek() {
+// System.out.println(stk[top]);
+// return stk[top];
+// }
 
-  void push(int data) {
-    if (isFull()) {
-      System.out.println("Stack overflow, stack is full");
-    } else {
-      stk[++top] = data;
-    }
-  }
-}
+// int pop() {
+// if (isEmpty()) {
+// System.out.println("Stack is empty, no item to pop");
+// return -1;
+// } else {
+// return stk[top--];
+// }
+// }
+
+// void push(int data) {
+// if (isFull()) {
+// System.out.println("Stack overflow, stack is full");
+// } else {
+// stk[++top] = data;
+// }
+// }
+// }

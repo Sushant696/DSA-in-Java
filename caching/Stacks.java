@@ -1,4 +1,4 @@
-package Stacks;
+package caching;
 
 public class Stacks {
   char[] stk;
