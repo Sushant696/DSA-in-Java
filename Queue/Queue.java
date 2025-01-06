@@ -1,53 +1,54 @@
-// package Queue;
+package Queue;
 
-// /**
-// * Queue
-// */
-// public class Queue {
-// int queue[];
-// int size;
-// int front = -1;
-// int rear = -1;
+/**
+ * Queue
+ */
+public class Queue {
 
-// Queue(int size) {
-// this.size = size;
-// queue = new int[size];
-// }
+    int queue[];
+    int size;
+    int front = -1;
+    int rear = -1;
 
-// void enqueue(int data) {
-// if (isFull()) {
-// System.out.println("Queue is full");
-// } else {
-// if (front == -1) {
-// front = 0;
-// }
-// queue[++rear] = data;
-// }
-// }
+    public Queue(int size) {
+        this.size = size;
+        queue = new int[size];
+    }
 
-// int dequeqe() {
+    public void enqueue(int data) {
+        if (isFull()) {
+            System.out.println("Queue is full");
+        } else {
+            if (front == -1) {
+                front = 0;
+            }
+            queue[++rear] = data;
+        }
+    }
 
-// if (isEmpty()) {
-// System.out.println("Queue is Empty..");
-// return -1;
-// }
-// if (front == rear) {
-// int temp = front;
-// front = rear = -1;
-// return queue[temp];
-// }
-// return queue[front++];
-// }
+    public int dequeqe() {
 
-// boolean isFull() {
-// return rear == size - 1;
-// }
+        if (isEmpty()) {
+            System.out.println("Queue is Empty..");
+            return -1;
+        }
+        if (front == rear) {
+            int temp = front;
+            front = rear = -1;
+            return queue[temp];
+        }
+        return queue[front++];
+    }
 
-// boolean isEmpty() {
-// return rear == -1 && front == -1;
-// }
+    public boolean isFull() {
+        return rear == size - 1;
+    }
 
-// public static void main(String[] args) {
-// System.out.println("");
-// }
-// }
+    public boolean isEmpty() {
+        return rear == -1 && front == -1;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("");
+    }
+}

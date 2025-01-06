@@ -44,6 +44,24 @@ public class AdjLst {
         }
     }
 
+    void depthFirstSearch(int source) {
+        boolean visited[] = new boolean[vertices];
+        DFS(source, visited);
+    }
+
+    void DFS(int rootNode, boolean visited[]) {
+        System.out.println(rootNode);
+        visited[rootNode] = true;
+
+        // * get adjnodes and traverse throught the list
+        for (int j = 0; j < list.get(rootNode).size(); j++) {
+            int adjNode = list.get(rootNode).get(j);
+            if (!visited[adjNode]) {
+                DFS(adjNode, visited);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         AdjLst lst = new AdjLst(5);
         lst.addEdges(0, 1);
@@ -54,5 +72,6 @@ public class AdjLst {
         lst.addEdges(3, 4);
         lst.printList();
         lst.getAdjacentNode(0);
+        lst.depthFirstSearch(0);
     }
 }

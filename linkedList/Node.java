@@ -3,17 +3,13 @@ package linkedList;
 /**
  * node
  */
-
 public class Node {
-  int data;
-  Node next;
 
-  Node(int data) {
-    this.data = data;
-    this.next = null;
-  }
+    public int data;
+    public Node next;
 
-  public static void main(String[] args) {
-
-  }
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
 }

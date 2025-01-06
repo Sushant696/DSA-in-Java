@@ -1,5 +1,6 @@
 package Graphs;
 
+import Queue.Queue;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,10 +15,33 @@ class AdjMatrix {
     }
 
     void addEdges(int u, int v) {
-
 // bi directional connection between the two  vertices connedted by edge 
         matrix[u][v] = 1;
         matrix[v][u] = 1;
+    }
+
+    void BFS(int source) {
+        Queue q = new Queue(vertices);
+        boolean visited[] = new boolean[vertices];
+        q.enqueue(source);
+        visited[source] = true;
+        while (!q.isEmpty()) {
+            int x = q.dequeqe();
+
+            // todo  what is actual task perform here in real implementation
+            System.out.println(x);
+
+            // *call getAdjNodes and iterated through the list.
+            for (int j = 0; j < vertices; j++) {
+                if (matrix[x][j] != 0) {
+                    if (!visited[j]) {
+                        q.enqueue(j);           
+                        visited[j] = true;
+                    }
+                }
+            }
+        }
+
     }
 
     void printGraph() {

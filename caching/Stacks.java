@@ -1,50 +1,52 @@
 package caching;
 
 public class Stacks {
-  char[] stk;
-  int top = -1;
-  static int size;
 
-  Stacks(int size) {
-    stk = new char[size];
-    this.size = size;
-  }
+    char[] stk;
 
-  void push(char data) {
+    int top = -1;
+    static int size;
 
-    if (isFull()) {
-      System.out.println("Stack overflow");
-    } else {
-      stk[++top] = data;
+    Stacks(int size) {
+        stk = new char[size];
+        this.size = size;
     }
-  }
 
-  char pop() {
-    if (isEmpty()) {
-      System.out.println("Stack is empty");
-      return 'f';
+    void push(char data) {
+
+        if (isFull()) {
+            System.out.println("Stack overflow");
+        } else {
+            stk[++top] = data;
+        }
     }
-    return stk[top--];
-  }
 
-  boolean isEmpty() {
-    return top == -1;
-  }
+    char pop() {
+        if (isEmpty()) {
+            System.out.println("Stack is empty");
+            return 'f';
+        }
+        return stk[top--];
+    }
 
-  char peek() {
-    return stk[top];
-  }
+    boolean isEmpty() {
+        return top == -1;
+    }
 
-  boolean isFull() {
-    return top == size - 1; // return true if at top at last index
-  }
+    char peek() {
+        return stk[top];
+    }
 
-  public static void main(String[] args) {
-    Stacks s = new Stacks(size);
-    s.push('1');
-    System.out.println();
+    boolean isFull() {
+        return top == size - 1; // return true if at top at last index
+    }
 
-  }
+    public static void main(String[] args) {
+        Stacks s = new Stacks(size);
+        s.push('1');
+        System.out.println();
+
+    }
 }
 
 // write an algo to convert infix to prefix and vice versa
