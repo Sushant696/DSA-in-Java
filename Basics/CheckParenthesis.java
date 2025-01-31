@@ -6,7 +6,7 @@ public class CheckParenthesis {
     Stacks stk = new Stacks(exp.length());
     String openBraces = "[{(";
     String closedBraces = "]})";
-
+    
     for (int i = 0; i < exp.length(); i++) {
       char ch = exp.charAt(i);
 

@@ -13,7 +13,6 @@ class AdjList {
         this.vertices = vertices;
         adjList = new SingleLinkedlist[vertices];
         // initialize the adjList then instantiate
-
         for (int i = 0; i < vertices; i++) {
             adjList[i] = new SingleLinkedlist();
         }
